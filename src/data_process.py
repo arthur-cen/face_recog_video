@@ -70,16 +70,29 @@ def main():
                 if eyesn >= 2:
                     cv2.imwrite(os.path.join(output_data, tag + str(img_counter) + ".png"), imgCrop)
                     #Add to lists, which will be used later for creating csv files
-                    labels.append(tag_counter)
+                    labels.append(str(tag_counter))
                     filenames.append(tag + str(img_counter) + ".png")
                     cv2.imshow('img',imgCrop)
-                    print("Image"+str(tag + str(img_counter))+" has been processed and cropped")
+                    print("Image "+str(tag + str(img_counter) + ".png")+" has been processed and cropped")
                 img_counter += 1
 
                 k = cv2.waitKey(30) & 0xff
                 if k == 27:
                     break
         tag_counter += 1
+    #TODO: write to cvs file here
+    lines = zip(*[labels, filenames])
+    with open(os.path.join(output_data, 'data.csv'), 'wb') as f:
+    	for i in range(len(tags)):
+    		f.write(str(i) + "," + tags[i])
+    		f.write("\n")
+    	f.write("#, #")
+    	f.write("\n")
+    	for line in lines:
+    		line = ','.join(line)
+    		f.write(line)
+    		f.write('\n')
+    f.close()
 
 
 if __name__ == '__main__':
