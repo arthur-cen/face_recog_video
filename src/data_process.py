@@ -58,7 +58,8 @@ def main():
                 (x,y,w,h) = faces[0]
 
                 #TODO: Resize the image here
-                imgCrop = gray[y:y+170,x:x+170]
+                imgCrop = gray[y:y+h, x:x+w]
+                imgCrop = cv2.resize(imgCrop, (350, 350))
 
                 # cv2.rectangle(img,(x,y),(x+w,y+h),(255,0,0),2)
                 roi_gray = gray[y:y+h, x:x+w]
