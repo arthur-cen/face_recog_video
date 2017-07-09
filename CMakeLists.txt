@@ -35,7 +35,6 @@ link_directories(${CMAKE_CURRENT_SOURCE_DIR}/lib)
 
 # Build the sample apps.
 set(APPS
-	"src/data_process.cpp"
 	"src/train.cpp"
 	"src/online_face_recog.cpp"
     "src/simple_model_tester.cpp"
