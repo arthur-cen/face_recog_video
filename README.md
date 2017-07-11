@@ -5,7 +5,7 @@ This face recognition project was built for **PerceptIn Visual Inertial Module S
 ## File List
 1. `build/` Project Build Directory.
 
-2. `model/` Directory that stores all useful pre-trained models, and user trained models.
+2. `models/` Directory that stores all useful pre-trained models, and user trained models.
 
 3. `raw_data/`  Directory that stors all training data (not processed)
 4. `data/` Directory that stores all training data (processed)
