@@ -1,0 +1,1 @@
+## Please use this directory as the output directory of processed images
