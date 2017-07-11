@@ -1,5 +1,10 @@
-./data/
-./data_test/
+./data/*.png
+./build/*
+./raw_data/Arthur/
+./raw_data/Yibing/
+./raw_data/Vivian/
+./lib/
+./include/
 ./ignore/
-./build/
-
+./PIRVS_API_Documentation_V0.4.6.pdf
+./voc.json
